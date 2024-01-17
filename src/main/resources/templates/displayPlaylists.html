@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+iframe{
+height:200px;
+width:700px;
+}
+</style>
+</head>
+<body>
+<table border="1">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Songs</th>
+			</tr>
+		</thead>
+			<tbody>
+				<tr th:each="plist:${allPlaylists}">
+					<td th:text="${plist.id}"></td>
+					<td th:text="${plist.name}"></td>
+					<td th:text="${plist:songs}"></td>
+				</tr>
+			</tbody>	
+	</table>
+</body>
+</html>
